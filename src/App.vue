@@ -1,8 +1,10 @@
 <script setup>
-// import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+import Navigation from '@/components/TheNavigation.vue'
 </script>
 
 <template>
+  <Navigation />
   <div class="container">
     <RouterView />
   </div>
