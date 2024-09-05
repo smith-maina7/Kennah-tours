@@ -7,7 +7,20 @@ const routes = [
   {
     path: '/destinations/:id/:slug',
     name: 'destination',
-    component: () => /* webpackChunkName: "destination" */ import('@/views/DestinationShow.vue')
+    component: () => /* webpackChunkName: "destination" */ import('@/views/DestinationShow.vue'),
+    props: ({ params }) => ({ ...router.params, id: parseInt(params.id), slug: params.slug }),
+    children: [
+      {
+        path: ':experienceSlug',
+        name: 'experience.show',
+        component: () => import('@/views/ExperienceShow.vue'),
+        props: ({ params }) => ({
+          id: parseInt(params.id),
+          slug: params.slug,
+          experienceSlug: params.experienceSlug
+        })
+      }
+    ]
   }
 ]
 
