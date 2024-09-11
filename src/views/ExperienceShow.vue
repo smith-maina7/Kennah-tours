@@ -22,10 +22,3 @@ const experience = computed(() =>
     <p>{{ experience.description }}</p>
   </section>
 </template>
-
-<style scoped>
-img {
-  max-width: 250px;
-  height: auto;
-}
-</style>
