@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "es6", // Include this
+      "dom" // Include other libraries as needed
+    ],
     "paths": {
       "@/*": ["./src/*"]
     }
