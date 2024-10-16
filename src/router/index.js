@@ -23,6 +23,7 @@ const routes = [
         next()
       }
     },
+    hkhkjh,
     children: [
       {
         path: ':experienceSlug',
